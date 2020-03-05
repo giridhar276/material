@@ -1,0 +1,588 @@
+*** Everything is python is Object ****
+*** Every Object contains set of methods *****
+
+
+objects
+--------
+
+number :
+---------
+number can be integer or octal or decimal or hexa.
+
+aval = 20
+bval = 54.4
+
+string
+---------
+string can be defined in single or double or triple quotes.
+
+aname = 'python programming'
+bname = "java programming"
+cname = """scala programming"""
+
+list( array in C )
+--------------------
+-list contains set of elements.
+-Elements can be set of numbers or strings or any combination
+-list elements are defined in []
+
+alist = [10,20,30]
+blist = ['unix','scala','spark']
+clist = [10,3,4.4,'hadoop']
+
+
+tuple  ( READ ONLY )
+------
+-tuple contains set of elements
+-Elements can be set of numbers or strings or any combination
+-Tuple elements are defined in ().
+*******   Elements inside tuple CANNOT be modified *******
+
+atup = (10,20,30)
+btup = (10,4.54,'linux')
+
+
+dictionary
+------------
+dictionary contains elements in the form of keys and values.
+dictionary elements are defined in {}.
+** Indexing is NOT allowed in dictionary **
+** Elements are accessed with the key **
+** In dictionary... keys are always UNIQUE
+
+object = { key:value }
+key  - number/string
+value- number/string/list/tuple/dictionary/set
+
+Syntax :      object = { key:value , key:value , key:value .... }
+Example:        book = {'chap1':10 ,'chap2':20 ,'chap3':30 }
+               values= {1:2,3:4,5:6}
+	       book = {'chap1':[10,'Mark','200pages'] ,'chap2':[20,'Rita','300pages'   }
+
+book = {'chap1':10 ,'chap2':20 ,'chap3':30 }
+print(book['chap1'])  # 10 
+print(book['chap2'])  # 20
+
+
+set
+-----
+-set is UNORDERED collection of UNIQUE elements of same type.
+-set elements are defined in {}.
+-Indexing is NOT in set operations.
+
+aset = {10,10,10,10,20}
+print(aset)
+
+
+
+
+
+commenting in python
+--------------------
+
+single line comment ( # )
+-------------------
+
+
+
+multi-line comment
+---------------------
+all the lines defined in between
+''' and ''' are ignored by 
+interpreter
+
+'''
+print(1,2)
+'''
+
+functions & methods
+---------------------
+
+method :  Every method is object specific
+          String methods are different to list methods
+          All the object methods are accessed with . operator
+
+function:  functions are common for all the objects
+
+How to display all the List of BUILTIN functions:      
+-------------------------------------------------
+In the console
+
+dir(__builtins__)
+
+
+frequently used functions
+--------------------------
+print()
+len()
+help()
+dir()
+input()   : capture input from the sceen
+range()   : display the range of integers
+type()    : to check the class of object
+isinstance(): to validate the type of object
+id()      : to display the UNIQUE reference of object
+max()     : max([10,20,30,40])   # 40
+min()     : min([10,20,30,40])   # 10
+sum()     : sum([10,20,30,40])   # 100
+open()    : used to open the file
+            object = open("abc.txt","r")
+
+
+conversion functions ( typecasting)
+--------------------
+
+int()
+float()
+oct()
+str()
+list()
+tuple()
+dict()
+set()
+
+
+statements in python
+-------------------
+
+
+conditional statements
+------------------------
+simple if
+if-else
+if-elif-elif-elif... else
+
+control statements
+---------------
+for
+while
+
+jump statements
+---------------
+break
+continue
+
+
+operators
+----------
+
+arithmetic operators :   + - * % /
+
+relational operators :   < <= > >= == !=
+
+                         if first < 10 :
+				#your logic
+
+assignment operator : ( ++ and -- are NOT allowed in python )
+---------------------------------------------------
+val =10
+val +=10   (or)  val = val +10
+val -=10   (or)  val = val -10
+
+logical operators    and     or     not
+------------------
+                     if  len(name) > 10  and name.isupper() :
+			# your logic
+		     if val > 10  or val < 100 :
+			# your logic
+                     if not name.isupper():
+			print("Lower")
+
+special operators :   in
+                      as ( used in libraries and exception handling )
+                      -----------Example ------------------
+                      if 'python' in 'python programming':
+				print("defined")
+
+		      if 10 in [10,20,30]:
+			    # your logic
+
+		      adict = {'chap1':10 ,'chap2':20}
+		      if 'chap1' in adict:
+			   # your logic
+
+level1
+level1
+level1
+if cond :
+	level2
+        level2
+	level2
+level1
+level1
+level1
+
+
+
+nested
+--------
+
+level1
+level1
+level1
+if cond :
+	level2
+	if cond:
+		level3
+		level3
+		level3
+	else:
+		level3
+		level3
+level1
+level1
+level1
+
+
+
+ip = input("Enter IP address :")
+iplist = ip.split(".")
+
+if iplist[0] in range(1,256) and iplist[1] in range(0,255) and iplist[2] in range(0,255) and iplist[3] in range(0,255):
+    print("Valid IP address")
+else:
+    print("Invalid IP address")    
+
+
+file handling
+-------------
+
+working with flat files  ( .txt  csv log conf   )
+------------------------------------------------
+
+
+opening the file   
+----------------
+
+syntax :    object = open(filename, mode)
+Example:       fr= open("abc.txt","r")     --------> read mode
+               fw= open("abc.txt","w")     --------> write mode 
+	       fa=open("abc.txt","a")     --------> append mode 
+
+closing the file
+------------------
+fr.close()
+
+
+
+
+
+
+working with third party files  ( mp4 pptx docx xlsx pdf ... )
+
+
+file read operation
+------------------
+- reading line by line
+- reading the complete file in the list format
+- reading the complete file in the string format  ---> read()
+- using csv library    ( used for reading .csv files )
+- using pandas library ( generally used in data analytics )
+- using json library   ( used for reading .json files )
+
+
+
+
+
+
+
+
+path 
+=----
+open("C:\\Users\\Admin\\Desktop\\numbers.txt","w")
+
+## OR
+
+open("C:/Users/Admin/Desktop/numbers.txt","w")
+
+## OR
+## raw string
+open(r"C:\Users\Admin\Desktop\numbers.txt","w")
+
+#LINux
+open("/tmp/abc.txt","w")
+
+
+
+day1and day2 notes and classroom programs
+---------------------------------------
+https://github.com/giridhar276/Accenturemumbai/archive/master.zip
+
+
+
+exception handling
+-------------------
+
+1.syntax error
+2. runtime error
+
+Handling the exceptions in the runtime is known as exception handling
+
+try
+except
+else     (optional)
+finally  (optional)
+raise    (optional)
+
+
+function/subroutine/definition
+-------------------------------
+
+functions are used for reusability purpose.
+
+There are 2 types of functions
+----------------------------
+
+- builtin functions
+- user defined functions
+
+
+syntax:
+
+def add(first,second):
+    c = first + second
+    return c
+
+
+total = add(10,20)
+print(total)
+
+
+
+passing parameters to function body
+--------------------
+
+fixed arguments
+default arguments
+keyword arguments
+variable length arguments
+
+
+
+
+
+libraries  or modules or packages
+---------------------------------
+
+Every library contains set of methods.
+
+There are 2 types of libraries
+--------------------
+builtin library
+third party library
+
+
+importing the library  ( importing all the methods )
+---------------------
+import math        
+print(math.log(4))
+
+importing required methods ONLY   ( . is NOT required )
+----------------------------
+from math import log,floor
+print(log(3))
+print(floor(34.4))
+
+
+importing with alias name
+---------------------------
+import math as m
+print(m.tan(2))
+print(m.floor(34.4))
+
+
+
+
+
+
+
+builtin library
+---------------
+All the builtin libraries are installed with python iself which are generally for regular requirements ( working with ftp, math operations, file handling, directory handling , email handling  , string manipulations  ... )
+
+
+
+
+third party library : 
+-------------------
+Depending on the requirement ( cloud integration , db handling , remote servers , applying ML , image processing ... ) , devloper has to install the third party library from www.pypi.org  ( package package Index )
+
+
+
+
+
+display all the databases
+--------------------------
+show databases ;
+
+creating your database
+------------------------
+create database accenture ;
+
+accessing your DB
+-----------------
+use accenture ;
+
+displaying table
+-----------------
+show tables ;    ( will be empty )
+
+create table
+-----------------
+create table cityguide ( street varchar(100) , city varchar(100) ) ;
+
+inserting records
+------------------
+insert into cityguide values('101 MG Road','Mumbai');
+insert into cityguide values('101 GT Road','Hyderabad');
+
+display all the records
+-------------------------
+select * from cityguide ;
+
+describe table
+-----------------
+desc cityguide;
+
+database      library
+----------------------
+mysql     -- pymysql
+SQLServer -- pymssql
+cx_Oracle -- cx_Oracle
+MongoDB   -- pymongo
+IBM DB2   -- db2
+SAP       -- saphana
+
+
+cloudplatform    library
+---------------------------
+AWS         --   boto3
+Microsoft   --   azure
+Oracle OCI  --   oci
+Google cloud--   gcp
+
+
+analytics,ML
+----------
+pandas
+numpy
+scipy
+matplotlib
+seaborn
+scikitlearn
+
+networking
+---------------
+socket
+paramiko
+netmiko
+telnetlib
+ftplib
+pysftp
+
+image processing
+------------------
+opencv
+matplotlib
+
+
+statistics
+------------
+statistics
+statmodels
+
+regular expressions ( regex)
+----------------------------
+- search
+- match ( at the beginning of the string )
+- replace
+- findall
+
+
+wildcard characters (or) metacharacters
+-------------------------------------------
+
+^  :  match at the beginning of the string
+      if re.search("^python programming",line)
+	
+
+$  :  match at th end of the string
+      if re.search("python programming$",line)
+
+*  :  zero or more occurences of the preceding character
+        if re.search("pyt*hon programming",line)
+
+        python programming                  valid
+	pyttttttttttttttho programming      valid
+        pyhon programming                   valid
+
++  :  one ore more occurence of the preceding character
+        python programming                   valid
+	pyttttttttttttttho programming       valid
+        pyhon programming                    Invalid
+ 
+
+?  :   either zero or one occurence of the preceding character
+	if re.search("pyt?hon programming",line)
+        python programming                   Valid          
+	pyttttttttttttttho programming       Invalid
+        pyhon programming                    Valid
+
+.  :    any single character or digit or symbol
+	if re.search(".ython programming",line)
+
+() :    (pattern1|pattern2)   --- grouping
+	if re.search("python|perl", line ):
+
+
+[] :    character class   -- any single character from the []
+        if re.search("[pmqj]ython",line) :
+
+{} :    {min,max}   -- min to max occurences of preceding
+	if re.search("pyt{3,6}hon programming",line)
+
+\d :     digit
+
+\w  :    word
+
+\s  :    any white space
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+beautiful soup is used for web scraping
+
+Extracting the data from the web is known as web scraping
+
+library : bs4
+
+python beautiful soup library
+
+
+
+
+
+
+
+
+
+
+
+
+
+

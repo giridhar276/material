@@ -1,0 +1,1443 @@
+write a program to capture any filename from the keyboard and display its filename and extension seperately
+
+Output:
+
+Enter any filename:  abc.py
+
+filename : abc
+extension: py
+
+--------------------------------------------------------------------------------------------------------
+
+write  a program to capture some delimeted string from the keyboard and split the string with comma and display the length after splitting.
+
+Output:
+Enter any delimited string :  python,perl,unix,scala,spark
+
+List elements are : [ python , perl, unix,scala , spark ]
+Length of the list  : 5
+
+
+--------------------------------------------------------------------------------------------------------
+
+write a program for performing the below operaitons
+
+1. define empty tuple
+2. append  "unix" to the tuple
+3. append few more elements like 'spark', 'scala','hadoop',sccm' to the list
+4  append few more elements like 'c','cpp','java','salesforce','sap','unix' to the list
+5.  remove java
+6  remove salesforce -
+7. add  'oracle' at the index 0
+8. add ' mongodb' at the index 5
+9. reverse all the elements
+10. display the total.  no. of eleents of the list
+11. display the total count of 'unix' in the list
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+define tuple as below
+numbers = (10,20,10,20,30,40,60,70)
+
+write a program to remove all the duplicates of the tuple
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+write a program to capture 2 numbers from the keyboard and display its sum
+
+
+Enter first number : 10
+Enter second number: 20
+
+Total : 30
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+write a program to capture "python programming" from the keyboard and replace "python" with "scala"
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+define two lists
+alist = [10,20,30,40,50,10]
+blist = [40,50,60,70,80]
+
+display all the UNIQUE elements of both alist and blist
+display all the COMMON elements of both alist and blist
+
+----------------------------------------------------------------------------------------------------
+define a string as below
+
+lang = "perl,unix,hadoop,scala,spark,ruby,go"
+
+write a program to check whether 'python' is existing in the string or not.
+
+
+--------------------------------------------------------------------------------------------------------
+capture any string from the keyboard and perform the below operations
+
+1. check whether the string is upper or not
+2. convert the string to list
+3. display the string exactly in the center of 30 spaces width
+
+    print(name.center(30))
+
+4. convert the string into lower case
+
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+write a progam to capture filename from the keyboard and display the type of the file
+if the filename is ending with .py  .... display "Its python file"
+if the filename is ending with .pl   .... display "Its perl file"
+If the filename is ending with .c  ....... display "Its C lang file"
+if the filename is ending with .json ...  display "Its json file"
+
+Enter any filename :  info.py
+Python file
+
+code
+-------
+filename = input("Enter any filename :")
+
+if filename.endswith(".py"):
+    print("Python file")
+elif filename.endswith(".pl"):
+    print("perl file")
+elif filename.endswith(".c") :
+    print("C file")
+elif filename.endswith(".json"):
+    print("json file")
+else:
+    print("unknown file")    
+
+--------------------------------------------------------------------------------------------------------
+
+
+write a program to validate the IP address
+
+Enter any IP address : 192.168.0.1
+Its valid IP
+Enter any IP address : 1001.1.2.3
+Invalid IP
+
+code
+------
+ip = input("Enter IP address :")
+iplist = ip.split(".")
+
+# map() will convert all the list elements --> integers
+iplist = list(map(int,iplist))
+
+if iplist[0] in range(1,256) and iplist[1] in range(0,256) and iplist[2] in range(0,256) and iplist[3] in range(0,256):
+    print("Valid IP address")
+else:
+    print("Invalid IP address")   
+
+
+--------------------------------------------------------------------------------------------------------
+
+write a program to capture any string from the keyboard and perform the below
+
+if the string is defined in uppercase......   convert the string to lower and display it
+
+if the string is defined in lowercase ...... convert the string to upper and display it.
+
+code
+-----
+name = input("Enter any string :")
+
+if name.isupper():
+    print(name.lower())
+  
+elif name.islower():
+    print(name.upper())    
+
+
+--------------------------------------------------------------------------------------------------------
+
+write a program to capture username and password from the keyboard and validate the password
+
+condition1:  length of the password should be greater than  5
+condition2:   length of the password should be less than 12
+condition3:  atleast  one symbol ( @ or * or  $ ) should exist in the password
+condition4:  whole password SHOULD not be in upper case
+
+code
+-----
+user = input("Enter any username :")
+password = input("Enter any password :")
+
+if len(password) in range(5,12) and ('@' in password or '$' in password) and not password.isupper():
+    print("Valid password")
+else:
+    print("Invalid password")
+
+
+--------------------------------------------------------------------------------------------------------
+
+define some tuple as below
+
+alist = ("unix","hadoop","oracle","scala")
+
+and write a program to append "spark" to the tuple
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+write a program to display all the numbers from 50 to 1  
+
+--------------------------------------------------------------------------------------------------------
+
+write a program to display all the odd numbers from 20 to 10
+
+
+--------------------------------------------------------------------------------------------------------
+
+define some list as below
+
+alist = ["google","oracle","microsoft"]
+
+write a program to
+add "http://www"  at the beginning and  
+add ".com" at tht end of the string
+
+Output:
+http://www.google.com
+http://www/.oracle.com
+http://www.microsoft.com
+
+code
+--------
+#METHOD1
+alist = ["google","oracle","microsoft"]
+string = "http://www.{}.com"
+for item in alist:
+    print(string.format(item))
+    
+    
+#method2
+alist = ["google","oracle","microsoft"]
+for item in alist:
+    print("http://" + item + ".com")
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+define some list as below
+
+domains = ["google","www.unix","oracle.com"]
+
+write a program
+
+to add "www"  at the beginning  if the string is not starting with "www"
+  and
+".com" at the end of each string if the string is not ending with ".com"
+
+Output:
+www.google.com
+www.unix.com
+www.oracle.com
+
+
+--------------------------------------------------------------------------------------------------------
+
+write a program to display the below IP addresses
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+write a program to display the below IP addresses
+
+192.168.0.1
+192.168.0.2
+192.168.0.3
+..
+..
+192.168.0.10
+192.168.1.1
+192.168.1.2
+192.168.1.3
+..
+..
+192.168.1.10
+
+
+
+--------------------------------------------------------------------------------------------------------
+define dictionary as below
+
+infodoc =  { 2001: {"ap":70}  , 2002:{"tn":75} , 2003:{"up":50} }
+
+write a program to display the below output
+
+state literacy rate
+------  ---------------
+ap       70
+tn        75
+up       50
+
+
+
+--------------------------------------------------------------------------------------------------------
+
+define some dictionary as below
+
+adict = {"emp1":["raj",28] ,"emp2":["ram",34] ,"emp3":["rita",24]}
+
+write a program to check whether the key "emp2" is existing in the list or not
+
+---------------------------------------------------------------------------------------------
+
+define some list as below
+
+data = ["perl","unix","perl","scala","perl"]
+
+write a program to count the no. of occurences of each item
+
+perl 3
+unix 1
+scala 1
+
+---------------------------------------------------------------------------------------------
+define a list below
+
+colors = [
+{
+"colors": "red",
+"values": "#f00"
+},
+{
+"colors": "green",
+"values": "#0f0"
+},
+{
+"colors": "blue",
+"values": "#00f"
+},
+{
+"colors": "cyan",
+"values": "#0ff"
+},
+{
+"colors": "magenta",
+"values": "#f0f"
+},
+{
+"colors": "yellow",
+"values": "#ff0"
+},
+{
+"colors": "black",
+"values": "#000"
+}
+]
+write a program to display all the colors and its values.
+
+red(#f00)
+green(#0f0)
+blue(#00f)
+cyan(#0ff)
+magenta(#f0f)
+yellow(#ff0)
+black(#000)
+
+
+--------------------------------------------------------------------------------------------
+define a dictionray as below
+
+{
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"image":
+{
+"url": "images/0001.jpg",
+"width": 200,
+"height": 200
+},
+"thumbnail":
+{
+"url": "images/thumbnails/0001.jpg",
+"width": 32,
+"height": 32
+}
+}
+
+write a program to display the below output:
+
+excepted output:
+-------------------------
+id           : 0001
+type         :donut
+name       : Cake
+image.width   : 200
+image.height : 200
+image.url      : images/0001.jpg
+thumbnail.width   : 200
+thumbnail.height : 200
+thumbnail.url      : images/thumbnails/0001.jpg
+
+------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+
+create a dictionary as below
+
+{
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"ppu": 0.55,
+"batters":
+{
+"batter":
+[
+{ "id": "1001", "type": "Regular" },
+{ "id": "1002", "type": "Chocolate" },
+{ "id": "1003", "type": "Blueberry" },
+{ "id": "1004", "type": "Devil's Food" }
+]
+},
+"topping":
+[
+{ "id": "5001", "type": "None" },
+{ "id": "5002", "type": "Glazed" },
+{ "id": "5005", "type": "Sugar" },
+{ "id": "5007", "type": "Powdered Sugar" },
+{ "id": "5006", "type": "Chocolate with Sprinkles" },
+{ "id": "5003", "type": "Chocolate" },
+{ "id": "5004", "type": "Maple" }
+]
+}
+
+write a program to display the below output:
+
+Regular (1001)
+Chocolate (1002)
+Blueberry (1003)
+Devil's Food (1004)
+
+---------------------------------------------------------------------------------------------------------
+https://opensource.adobe.com/Spry/samples/data_region/JSONDataSetSample.html
+
+
+items =[
+{
+"id": "0001",
+"type": "donut",
+"name": "Cake",
+"ppu": 0.55,
+"batters":
+{
+"batter":
+[
+{ "id": "1001", "type": "Regular" },
+{ "id": "1002", "type": "Chocolate" },
+{ "id": "1003", "type": "Blueberry" },
+{ "id": "1004", "type": "Devil's Food" }
+]
+},
+"topping":
+[
+{ "id": "5001", "type": "None" },
+{ "id": "5002", "type": "Glazed" },
+{ "id": "5005", "type": "Sugar" },
+{ "id": "5007", "type": "Powdered Sugar" },
+{ "id": "5006", "type": "Chocolate with Sprinkles" },
+{ "id": "5003", "type": "Chocolate" },
+{ "id": "5004", "type": "Maple" }
+]
+},
+{
+"id": "0002",
+"type": "donut",
+"name": "Raised",
+"ppu": 0.55,
+"batters":
+{
+"batter":
+[
+{ "id": "1001", "type": "Regular" }
+]
+},
+"topping":
+[
+{ "id": "5001", "type": "None" },
+{ "id": "5002", "type": "Glazed" },
+{ "id": "5005", "type": "Sugar" },
+{ "id": "5003", "type": "Chocolate" },
+{ "id": "5004", "type": "Maple" }
+]
+},
+{
+"id": "0003",
+"type": "donut",
+"name": "Old Fashioned",
+"ppu": 0.55,
+"batters":
+{
+"batter":
+[
+{ "id": "1001", "type": "Regular" },
+{ "id": "1002", "type": "Chocolate" }
+]
+},
+"topping":
+[
+{ "id": "5001", "type": "None" },
+{ "id": "5002", "type": "Glazed" },
+{ "id": "5003", "type": "Chocolate" },
+{ "id": "5004", "type": "Maple" }
+]
+}
+]
+
+
+write a program to display the below output:
+
+
+Batters:
+
+Regular (1001)
+Chocolate (1002)
+Blueberry (1003)
+Devil's Food (1004)
+Regular (1001)
+Regular (1001)
+Chocolate (1002)
+
+
+
+
+
+https://github.com/thisdavejohnson/sandbox/blob/master/files/cloudformation-example-ec2.json
+
+
+
+
+
+
+write a program to write all the numbers  from 20 to  1 line by line to the file
+
+----------------------------------------------------------------------------------------------------------------------------------------- 
+
+write a program to capture your name from the keyboard and write the output to the file.
+
+----------------------------------------------------------------------------------------------------------------------------------------- 
+
+
+
+
+write a program to read the realestate.csv and display line by line
+------------------------------------------
+write a program to display the realestate.csv and 
+display STREET and CITY columns data ONLY
+------------------------------------------
+write a program to display all the UNIQUE city names from the file
+
+SACRAMENTO
+RIO LINDA
+..
+..
+------------------------------------------
+write a program to display the count of each city
+
+SACRAMENTO is repeated for 245 times
+RIO LINDA is repeated for 34 times
+..
+..
+------------------------------------------
+write a program to replace the lines containing SACRAMENTO with MUMBAI and write the output to backup.csv
+
+------------------------------------------
+
+https://github.com/giridhar276/Accenturemumbai/archive/master.zip
+------------------------------------------
+
+
+write a menu based program as below
+
+If the user enters option 1:  
+    prompt the user to enter the filename and display the file content
+    If the file is not existing .. display meaningful message that file is 
+    not existing
+
+If the user enters option 2:
+    capture your name from the keyboard and
+    capture the filename from the keyboard and
+    create the file and write your name to the file
+
+#####################
+Excepted output :
+
+1. read the file
+2. write to the file
+
+Enter your choice ? 1
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------
+
+
+write a program to display all the files from your current directory line by line
+
+------------------------------------------------------------------
+
+write a program to display all the files from the C:\  line by line
+
+------------------------------------------------------------------
+
+write a program to delete all .py files from the current directory
+
+------------------------------------------------------------------
+
+write a program to get the count of all the folders and files from your directory
+
+Expected output:
+
+Total files count : 999
+total folders count: 3
+------------------------------------------------------------------
+write a progra to display ONLy .py files from the current directory
+------------------------------------------------------------------
+write a program to display all the files and its size as below
+
+expected output
+---------------
+file1     10 bytes
+file2     30 bytes
+
+------------------------------------------------------------------
+write a program to display the below output
+
+- display the current working directory    os.getcwd()
+- display the current timestamp          import datetime  print(datetime.datetime.now()
+- display the curent User name          os.getlogin()
+- display the current python version    sys.version_info()
+                                                            sysconfig.get_python_version()
+  
+- display all the libraries that are installed   sys.modules()
+- display the Operation system name          os.name
+- display the current process id                    os.pid()
+
+- D:\ disk usage information                           psutil.disk_usage("D:\\")   
+- your system network connections               psutil.net_connections()
+- virtual memory information                          psutil.virtual_memory()
+------------------------------------------------------------------
+create 2 folders as below in your current directory
+
+source     :  ( copy few files to the source folder)
+destination:  will be empty
+
+write a program to copy all the files from source folder to destination directory
+---------------------------------------------------------------
+
+write a program to create empty file with today's timestamp
+
+8_Jan_2020.txt
+
+
+
+code
+---
+import time
+
+filename = time.strftime("%d_%b_%Y.log")
+
+with open(filename,"w") as fw:
+    pass
+    
+
+-----------------------------------------------------------------------------------------------
+
+ write a program to create 100 directories in the below format
+
+dir1
+dir2
+..
+..
+dir100
+-----------------------------------------------------------------------------------------------
+
+ write a program to remove 100 directories which are created
+
+-----------------------------------------------------------------------------------------------
+( take the backup of your existing folder )
+write a program to rename all your .py files in our local directory  to the below format
+
+filename            Ater renaming
+------------            -------------------
+fileread1.py        08012020_fileread1.py
+fileread2.py        08012020_fileread2.py
+
+
+
+#syntax : [ output_expression() for(set of values to iterate) if(conditional filtering) ]
+print([x**2 for x in range(0,10)])
+
+multiplied = [item*3 for item in [3,4,5] ] 
+print(multiplied)
+
+print([x for x in range(1,20) if x%2==0 ])
+
+print([x for x in 'MATHEMATICS' if x in ['A','E','I','O','U']])
+
+print(["Even" if i%2==0 else "Odd" for i in range(8)])
+
+colours = [ "red", "green", "yellow", "blue" ]
+things = [ "house", "car", "tree" ]
+coloured_things = [ (x,y) for x in colours for y in things ]
+
+a = 5
+table = [[a, b, a * b] for b in range(1, 11)]
+print(table)
+
+string = "my phone number is : 9550712233"
+numbers = [x for x in string if x.isdigit()] 
+print(numbers) 
+
+print([x.lower() for x in ["A","B","C"]])
+print([x.upper() for x in ["a","b","c"]])
+
+
+matrix = [[j for j in range(5)] for i in range(5)]
+print(matrix) #[[0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4], [0, 1, 2, 3, 4]]
+
+
+matrix = [[1, 2, 3], [4, 5], [6, 7, 8, 9]]
+flatten_matrix = [val for sublist in matrix for val in sublist]
+print(flatten_matrix)
+
+
+planets = [['Mercury', 'Venus', 'Earth'], ['Mars', 'Jupiter', 'Saturn'], ['Uranus', 'Neptune', 'Pluto']]
+#flatten a given 2-D list and only include those strings whose lengths are less than 6:
+#Expected Output: flatten_planets = [‘Venus’, ‘Earth’, ‘Mars’, ‘Pluto’]
+
+# 2-D List of planets 
+planets = [['Mercury', 'Venus', 'Earth'], ['Mars', 'Jupiter', 'Saturn'], ['Uranus', 'Neptune', 'Pluto']] 
+  
+flatten_planets = [] 
+  
+for sublist in planets: 
+    for planet in sublist: 
+          
+        if len(planet) < 6: 
+            flatten_planets.append(planet) 
+          
+print(flatten_planets)
+
+
+# Nested List comprehension with an if condition 
+flatten_planets = [planet for sublist in planets for planet in sublist if len(planet) < 6] 
+          
+print(flatten_planets)
+
+
+
+
+print([(x,y,z) for x in range(1,30) for y in range(x,30) for z in range(y,30) if x**2 + y**2 == z**2])
+#[(3, 4, 5), (5, 12, 13), (6, 8, 10), (7, 24, 25), (8, 15, 17), (9, 12, 15), (10, 24, 26), (12, 16, 20), (15, 20, 25), (20, 21, 29)]
+
+-------------------
+excel operations
+-------------------
+write a program to write aall the numbers from 1 to 10 to the excel file line by line
+------------------------------------------------------------
+write a program to read each line from realestate.csv and write the output
+to excel file.
+
+------------------------------------------------------------
+write a program to write all the filename from your current directory to the excel file
+------------------------------------------------------------
+
+
+
+step1 :   Open terminal and execute the below
+------------------------------------------------------------
+sudo apt-get install python3-pip libffi-dev libblas-dev libatlas-base-dev libpq-dev python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev libssl-dev openssh-server openssh-client
+  
+step2 :  Install the paramiko library for python3 
+------------------------------------------------------------
+sudo pip3 install paramiko
+
+step3 : Install spyder for linux
+------------------------------------------------------------
+sudo apt-get install spyder3
+
+
+Opening spyder in linux
+----------------------------
+In the terminal type the below
+
+/usr/bin/spyder3
+
+
+database - mysql
+----------------------
+
+display all the databases
+--------------------------
+show databases ;
+
+creating your database
+------------------------
+create database accenture ;
+
+accessing your DB
+-----------------
+use accenture ;
+
+displaying table
+-----------------
+show tables ;    ( will be empty )
+
+create table
+-----------------
+create table cityguide ( street varchar(100) , city varchar(100) ) ;
+
+inserting records
+------------------
+insert into cityguide values('101 MG Road','Mumbai');
+insert into cityguide values('101 GT Road','Hyderabad');
+
+display all the records
+-------------------------
+select * from cityguide ;
+
+describe table
+-----------------
+desc cityguide;
+
+
+
+import pymysql
+
+try:
+    with pymysql.connect(host='localhost',port=3306,user='root',password='india@123111',database='accenture') as db:
+        print(db)
+    
+    
+except pymysql.MySQLError as err:
+    print("Error occured")
+    print(err)
+
+except pymysql.InterfaceError as err:
+    print(err)    
+    
+except pymysql.DatabaseError as err:
+    print(err)
+
+
+properties.conf    ------------> create this file in your local directory
+-----------------
+[database_config]
+username = root
+password = india@123
+hostname = localhost
+port = 3306
+database = accenture
+
+
+reading parameters from config file
+-------------------------
+
+import pymysql
+from configparser import ConfigParser
+parser = ConfigParser()
+parser.read('properties.conf')
+username = parser.get('database_config', 'username')
+passname = parser.get('database_config', 'password')
+hostname = parser.get('database_config', 'hostname')
+portno = parser.get('database_config', 'port')
+portno= int(portno)
+db = parser.get('database_config', 'database')
+
+try:
+    with pymysql.connect(host=hostname,port=portno,user=username,password=passname,database=db) as db:
+        print(db)
+        query ="select * from cityguide"
+        db.execute(query)
+        for record in db.fetchall():
+            print("Street :", record[0])
+            print("City   :", record[1])
+            print("------------------")
+        # insert query
+        query = "insert into cityguide values('{}' ,'{}')"
+        db.execute(query.format('Karve Nagar','Pune'))
+        print(db.rowcount ,"record inserted")
+    
+    
+except pymysql.MySQLError as err:
+    print("Error occured")
+    print(err)
+
+except pymysql.InterfaceError as err:
+    print(err)    
+    
+except pymysql.DatabaseError as err:
+    print(err)    
+
+
+
+encrypting - decrypting
+------------------------------
+from cryptography.fernet import Fernet
+
+# creating key
+key = Fernet.generate_key()
+print("Key :",key)
+print()
+
+password = "india@123"
+# converting to byte script
+message = password.encode()
+ 
+
+f = Fernet(key)
+encrypted = f.encrypt(message)
+# encrypted password
+print(encrypted)
+print()
+
+# decrypting from encrypted password
+decrypted = f.decrypt(encrypted)
+# converting to string
+print(decrypted.decode('utf-8'))
+
+
+steps
+-------
+step1 :  replace the password in properties.conf with the encrypted password
+
+
+step2:   store the key in the seperate key using the below code
+
+from cryptography.fernet import Fernet
+
+# creating key
+key = Fernet.generate_key()
+fobj = open("mykey.txt","w")
+key = key.decode()
+fobj.write(key)
+fobj.close()
+
+
+
+step3:   modify your database program by reading the reading the
+         encrypted password and decrypt it.
+
+
+
+ remote connection
+----------------------
+
+import paramiko
+	
+host = '192.168.29.129'
+port = 22
+username = 'user'
+password = 'password'
+
+ssh = paramiko.SSHClient()	
+ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+ssh.connect(hostname=host, port=port, username=username, password = password)
+
+stdin,stdout,stderr = ssh.exec_command("hostname -I")	
+
+for line in stdout.read().splitlines():
+    line = line.decode('utf-8')
+    print(line)
+
+ssh.close()
+
+
+step 1 :creating key and storing to file  ( modify your password )
+-----------------------------------------
+
+from cryptography.fernet import Fernet
+
+# creating key
+key = Fernet.generate_key()
+fobj = open("mykey.txt","wb")
+fobj.write(key)
+fobj.close()
+
+
+
+password = "india@123"
+# converting to byte script
+message = password.encode()
+ 
+
+f = Fernet(key)
+encrypted = f.encrypt(message)
+# encrypted password
+print(encrypted)
+print()
+
+step 2 : database program with encryption
+----------------------------------------------
+from cryptography.fernet import Fernet
+import pymysql
+from configparser import ConfigParser
+import sys
+parser = ConfigParser()
+
+key = Fernet.generate_key()
+fobj = open("mykey.txt","rb")
+key = fobj.read()
+
+fobj.close()
+#print(key)
+
+f = Fernet(key)
+
+parser.read('properties.conf')
+username = parser.get('database_config', 'username')
+passname = parser.get('database_config', 'password')
+
+passname = passname.encode()
+passname = f.decrypt(passname)
+passname = passname.decode('utf-8')
+
+hostname = parser.get('database_config', 'hostname')
+portno = parser.get('database_config', 'port')
+portno= int(portno)
+db = parser.get('database_config', 'database')
+
+try:
+    with pymysql.connect(host=hostname,port=portno,user=username,password=passname,database=db) as db:
+        print(db)
+        query ="select * from cityguide"
+        db.execute(query)
+        for record in db.fetchall():
+            print("Street :", record[0])
+            print("City   :", record[1])
+            print("------------------")
+        # insert query
+        query = "insert into cityguide values('{}' ,'{}')"
+        db.execute(query.format('Karve Nagar','Pune'))
+        print(db.rowcount ,"record inserted")
+    
+    
+except pymysql.MySQLError as err:
+    print("Error occured")
+    print(err)
+
+except pymysql.InterfaceError as err:
+    print(err)    
+    
+except pymysql.DatabaseError as err:
+    print(err)    
+
+
+encrypting the file ( create a file mypassword.txt containing some data)
+----------------------
+from cryptography.fernet import Fernet
+import os
+# creating key
+key = Fernet.generate_key()
+fobj = open("mykey.txt","wb")
+fobj.write(key)
+fobj.close()
+
+
+input_file = 'mypassword.txt'
+output_file = 'mypassword.encrypted'
+
+with open(input_file, 'rb') as f:
+    data = f.read()
+
+fernet = Fernet(key)
+encrypted = fernet.encrypt(data)
+
+with open(output_file, 'wb') as f:
+    f.write(encrypted)
+
+# You can delete input_file if you want
+    
+os.unlink(input_file) 
+
+
+
+
+decrypt the file
+----------------------
+from cryptography.fernet import Fernet
+key = b'' # Use one of the methods to get a key (it must be the same as used in encrypting)
+input_file = 'mypassword.encrypted'
+output_file = 'mypassword.txt'
+
+fobj = open("mykey.txt","rb")
+key = fobj.read()
+fobj.close()
+
+with open(input_file, 'rb') as f:
+    data = f.read()
+
+fernet = Fernet(key)
+encrypted = fernet.decrypt(data)
+
+with open(output_file, 'wb') as f:
+    f.write(encrypted)
+
+# You can delete input_file if you want
+os.unlink(input_file)
+
+
+connecting to multiple remote servers
+----------------------------------------------------
+import paramiko
+	
+alist = ['192.168.29.129','192.168.29.130','192.168.29.131''192.168.29.132']
+port = 22
+username = 'user'
+password = 'password'
+
+
+for host in alist:
+
+	ssh = paramiko.SSHClient()	
+	ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+	ssh.connect(hostname=host, port=port, username=username, password = password)
+
+	stdin,stdout,stderr = ssh.exec_command("hostname -I")	
+
+	for line in stdout.read().splitlines():
+	    line = line.decode('utf-8')
+	    print(line)
+
+	ssh.close()
+
+
+languages.txt
+------------------
+python programming
+python
+programming in python
+pyttttttthon programming
+pyttthon programming
+perl
+scala and python programming
+uber
+pytttttttttttttttthon programming
+python and java
+python
+jython
+mython
+jython programming
+pytttttthon programming
+
+-----------------------------------------------------------------------------
+write a program to display all the lines containing 'python programming'
+
+
+regular expressions
+-----------------------------
+regular expressions ( regex)
+----------------------------
+- search
+- match ( at the beginning of the string )
+- replace
+- findall
+
+
+wildcard characters (or) metacharacters
+-------------------------------------------
+
+^  :  match at the beginning of the string
+      if re.search("^python programming",line)
+	
+
+$  :  match at th end of the string
+      if re.search("python programming$",line)
+
+*  :  zero or more occurences of the preceding character
+        if re.search("pyt*hon programming",line)
+
+        python programming                  valid
+	pyttttttttttttttho programming      valid
+        pyhon programming                   valid
+
++  :  one ore more occurence of the preceding character
+        python programming                   valid
+	pyttttttttttttttho programming       valid
+        pyhon programming                    Invalid
+ 
+
+?  :   either zero or one occurence of the preceding character
+	if re.search("pyt?hon programming",line)
+        python programming                   Valid          
+	pyttttttttttttttho programming       Invalid
+        pyhon programming                    Valid
+
+.  :    any single character or digit or symbol
+	if re.search(".ython programming",line)
+
+() :    (pattern1|pattern2)   --- grouping
+	if re.search("python|perl", line ):
+
+
+[] :    character class   -- any single character from the []
+        if re.search("[pmqj]ython",line) :
+
+{} :    {min,max}   -- min to max occurences of preceding
+	if re.search("pyt{3,6}hon programming",line)
+
+\d :     digit
+
+\w  :    word
+
+\s  :    any white space
+
+
+regex examples
+------------------------
+import re
+
+line  = "The rain in Spain"
+x = re.findall("ai", line)
+print(x)
+
+
+line = "The rain in Spain"
+x = re.findall("Portugal", line)
+print(x)
+ 
+
+line = "The rain in Spain"
+x = re.search("Portugal", line)
+print(x)
+
+
+
+line = "The rain in Spain"
+x = re.sub("\s", "9", line)
+print(x)
+
+
+import re
+string = 'hello 12 hi 89. Howdy 34'
+pattern = '\d+'
+result = re.findall(pattern, string)
+print(result)
+
+
+import re
+string = 'Twelve:12 Eighty nine:89.'
+pattern = '\d+'
+result = re.split(pattern, string)
+print(result)
+
+
+
+
+
+import re
+# multiline string
+string = 'abc    12de 23 \n f45 6'
+# matches all whitespace characters
+pattern = '\s+'
+# empty string
+replace = ' '
+new_string = re.sub(pattern, replace, string)
+print(new_string)
+
+
+
+import re
+string = '39801 356, 2102 1111'
+# Three digit number followed by space followed by two digit number
+pattern = '(\d{3}) (\d{2})'
+# match variable contains a Match object.
+match = re.search(pattern, string)
+if match:
+  print(match.group())
+else:
+  print("pattern not found")
+# Output: 801 35
+
+
+
+
+
+import re
+
+regex = '^[\w]+@[\w]+'
+
+email = "giridhar276@gmail.c33om"
+
+if re.search(regex,email):
+    print("valid email")
+else:
+    print("Invalid email")
+
+
+
+
+
+import re
+regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
+email = "giridhar276@gmail.com"
+
+if re.search(regex,email):
+    print("valid email")
+else:
+    print("Invalid email")
+
+
+
+
+
+
+
+write a program to read www.google.com and display all the available URLs of that page.
+
+output:
+https://mail.google.com/mail/?tab=wm&ogbl
+https://www.google.com/search/howsearchworks/?fg=1
+https://mail.google.com/mail/u/0/?tab=wm&ogbl#inbox
+https://www.google.com/search/howsearchworks/?fg=1
+
+
+beautifulsoup example
+-------------------------------
+#################### web scrapping ###########
+import requests
+from bs4 import BeautifulSoup
+
+try:
+    host = "https://www.google.com"
+    response = requests.get(host)
+    #response = requests.get(host, auth=(user,password))    
+    if response.status_code == 200 :
+        print("connection is successful")
+        soup = BeautifulSoup(response.text, 'html.parser')
+        for link in soup.find_all('a'):
+            print(link.get('href'))
+            print("-------------------")
+    else:
+        print("unsuccessful")    
+    
+except requests.ConnectTimeout as err:
+    print(err)    
+except requests.ProxyError as err:
+    print(err)    
+except requests.ConnectionError as err:
+    print(err)    
+except requests.HTTPError as err:
+    print(err)
+except Exception as err:
+    print("unknown error",err)    
+
+
+
+pyautogui
+----------------
+import subprocess as sp
+import time
+import pyautogui
+programName = "notepad.exe"
+
+sp.Popen(programName)
+time.sleep(1)
+pyautogui.typewrite("Welcome to python programming!\n")
+pyautogui.typewrite("----------------------------------\n")
+
+string = """
+There are two ways of installing third party libraries\n\n"
+"1. Manual download and install\n2. pip tool or easy_install tool\n"
+"All the third party libraries are available in\n\nwww.pypi.python.org\n"""
+ 
+
+liststr = list(string)
+
+
+for char in liststr:
+    time.sleep(0.02)
+    pyautogui.typewrite(char)
+
+
+
+
+user1		AKIASNCFJKVONI7WGSPJ	3NyecB1EOVbvb5EkB5V0ApOVklAI7nqFiZhn6teE	https://giridhar276.signin.aws.amazon.com/console
+
+
+user2		AKIASNCFJKVOKZDEEZUE	Glwu7WfAhpBn4xo9Xsn+hk3PEui6bGV2NzoAmPKA	https://giridhar276.signin.aws.amazon.com/console
+
+
+user3		AKIASNCFJKVOHATJRCXT	PeSTh724Hd67gM10lMRO2yMVkZFW06F0VNl/H3Of	https://giridhar276.signin.aws.amazon.com/console
+
+
+
+user4		AKIASNCFJKVOPTPZEVNW	T1U96rtX0yPKZ+Bbi9qNZAZSPhVpTALkmhRoLTxj	https://giridhar276.signin.aws.amazon.com/console
+
+
+
+https://tcheck.co/HzhMJ8
+
+
+https://github.com/giridhar276/Accenturemumbai/raw/master/flaskexamples-master.zip
+
+------------------------------------------------------------------
+
+from flask import Flask, escape, request
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    return "This is the home page"
+
+@app.route('/clients')
+def clients():
+    return "This is clients page"
+
+@app.route('/customers')
+def customers():
+    return "This is customers page"
+
+
+
+
+https://github.com/giridhar276/Accenturemumbai/raw/master/flaskexamples-master.zip
+
+
+https://github.com/giridhar276/Accenturemumbai/archive/master.zip
+
+
+create database myflaskapp ;
+
+use myflaskapp ;
+
+create table employees( name varchar(255) , email varchar(255), username varchar(255) , empid int(30) , location varchar(255), technology varchar(255) );
+
